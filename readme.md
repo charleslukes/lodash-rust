@@ -1,3 +1,5 @@
 # LODASH RUST 
 
-IMPLEMENTATION OF LODASH METHODS FOR RUST 
+Implementation of Lodash methods in Rust
+
+See [here](https://github.com/lodash/lodash) for all lodash methods 
