@@ -11,8 +11,8 @@ NB: More will be added
 - [x] [Capitalize](/src/capitalize.rs)
 - [x] [Difference](/src/difference.rs)
 - [ ] LowerCase
-- [ ] KebabCase
-- [ ] SnakeCase
+- [x] KebabCase
+- [x] SnakeCase
 - [ ] StartCase
 - [ ] UpperCase
 - [ ] UpperFirst
