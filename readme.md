@@ -13,7 +13,7 @@ NB: More will be added
 - [ ] LowerCase
 - [x] [KebabCase](/src/kebab_case.rs)
 - [x] [SnakeCase](/src/snake_case.rs)
-- [ ] StartCase
+- [x] [StartCase](/src/start_case.rs)
 - [ ] UpperCase
 - [ ] UpperFirst
 
