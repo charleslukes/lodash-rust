@@ -12,19 +12,25 @@ pub fn new(s: &str) -> String {
     let result = re.replace_all(s, " ");
     let result = result.trim();
 
-    let mut chars_list = result.chars().into_iter().collect::<Vec<char>>();
+    let chars_list = result.chars().into_iter().collect::<Vec<char>>();
     let mut build_string = String::new();
 
     let mut tmp = [0u8; 4];
 
     for value in 0..chars_list.len() {
         let mut current_char = chars_list[value];
+
         // encode_utf8(&mut tmp)
         if current_char.is_ascii_lowercase() && value == 0 {
             current_char = current_char.to_ascii_uppercase();
         }
 
-        if value > 1 && chars_list[value - 1] == ' ' {
+        if value > 0 && chars_list[value - 1] == ' ' {
+            current_char = current_char.to_ascii_uppercase();
+        }
+
+        if value > 0 && current_char.is_uppercase() && chars_list[value - 1].is_ascii_lowercase() {
+            build_string.push_str(" ");
             current_char = current_char.to_ascii_uppercase();
         }
 
