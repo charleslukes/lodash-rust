@@ -4,17 +4,18 @@ extern crate regex;
 ///
 /// @category String
 /// @param {String} [string=''] The string to convert.
-/// @returns {String} Returns the kebab cased string.
+/// @returns {String} Returns the snake cased string.
 ///
 
 pub fn new(s: &str) -> String {
     let re = regex::Regex::new("[^a-zA-Z0-9]+").unwrap();
     let result = re.replace_all(s, " ");
     let result = result.trim();
-    let result_string = re.replace_all(result, "_");
+    let underscore = "_";
+    let result_string = re.replace_all(result, underscore);
 
-    // check if string contains "-"
-    let re2 = regex::Regex::new("[_]+").unwrap();
+    // check if string contains "_"
+    let re2 = regex::Regex::new(format!("[{underscore}]+").as_str()).unwrap();
     let contains_underscore = re2.is_match(result_string.as_ref());
 
     // check if contains numbers
@@ -29,12 +30,12 @@ pub fn new(s: &str) -> String {
         let characters: Vec<char> = result_string.chars().collect();
         for letter in characters {
             if letter.is_uppercase() {
-                build_result_string.push_str("_");
+                build_result_string.push_str(underscore);
                 build_result_string.push_str(letter.encode_utf8(&mut tmp));
             } else if letter.is_numeric() {
-                build_result_string.push_str("_");
+                build_result_string.push_str(underscore);
                 build_result_string.push_str(letter.encode_utf8(&mut tmp));
-                build_result_string.push_str("_");
+                build_result_string.push_str(underscore);
             } else {
                 build_result_string.push_str(letter.encode_utf8(&mut tmp));
             }
