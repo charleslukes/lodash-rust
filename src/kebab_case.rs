@@ -11,10 +11,11 @@ pub fn new(s: &str) -> String {
     let re = regex::Regex::new("[^a-zA-Z0-9]+").unwrap();
     let result = re.replace_all(s, " ");
     let result = result.trim();
-    let result_string = re.replace_all(result, "-");
+    let hyphen = "-";
+    let result_string = re.replace_all(result, hyphen);
 
     // check if string contains "-"
-    let re2 = regex::Regex::new("[-]+").unwrap();
+    let re2 = regex::Regex::new(format!("[{hyphen}]+").as_str()).unwrap();
     let contains_hyphen = re2.is_match(result_string.as_ref());
 
     let mut build_result_string = String::new();
@@ -25,7 +26,7 @@ pub fn new(s: &str) -> String {
         let characters: Vec<char> = result_string.chars().collect();
         for letter in characters {
             if letter.is_uppercase() {
-                build_result_string.push_str("-");
+                build_result_string.push_str(hyphen);
             }
             build_result_string.push_str(letter.encode_utf8(&mut tmp));
         }
