@@ -16,7 +16,7 @@ NB: More will be added
 - [x] [StartCase](/src/start_case.rs)
 - [ ] UpperCase
 - [ ] UpperFirst
-- [ ] Drop
+- [x] [Drop](/src/drop.rs)
 - [ ] DropRight
 - [ ] DropWhile
 - [ ] DropRightWhile
