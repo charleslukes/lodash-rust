@@ -20,6 +20,12 @@ NB: More will be added
 - [x] [DropRight](/src/drop_right.rs)
 - [x] [DropWhile](/src/drop_while.rs)
 - [x] [DropRightWhile](/src/drop_right_while.rs)
+- [ ] Every
+- [ ] EveryValue
+- [ ] FindKey
+- [ ] FindLast
+- [ ] FindLastIndex
+- [ ] FindLastKey
 
 
 
