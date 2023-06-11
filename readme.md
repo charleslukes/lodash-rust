@@ -19,7 +19,7 @@ NB: More will be added
 - [x] [Drop](/src/drop.rs)
 - [x] [DropRight](/src/drop_right.rs)
 - [x] [DropWhile](/src/drop_while.rs)
-- [ ] DropRightWhile
+- [x] [DropRightWhile](/src/drop_right_while.rs)
 
 
 
