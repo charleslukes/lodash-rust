@@ -18,7 +18,7 @@ NB: More will be added
 - [ ] UpperFirst
 - [x] [Drop](/src/drop.rs)
 - [x] [DropRight](/src/drop_right.rs)
-- [ ] DropWhile
+- [x] [DropWhile](/src/drop_while.rs)
 - [ ] DropRightWhile
 
 
