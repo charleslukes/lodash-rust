@@ -7,3 +7,4 @@ pub mod start_case;
 pub mod drop;
 pub mod drop_right;
 pub mod drop_while;
+pub mod drop_right_while;
