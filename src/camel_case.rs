@@ -4,36 +4,40 @@
 ///  @returns {String} Returns the camel cased string.
 ///  @see lower_case, kebab_case, snake_case, start_case, upper_case, upper_first
 /// 
+extern crate regex;
 
+use camel_case::regex::Captures;
 
-// TODO: Rewrite just using regex
 pub fn new(string: String) -> String {
-    let mut combine_result: String = String::new();
-    let str_lower = string.to_ascii_lowercase();
-    let str_trim = str_lower.trim();
-    let mut str_array: Vec<char> = str_trim.chars().collect();
-
-    for i in 0..str_array.len() {
-        let char_to_string = str_array[i].to_string();
-        if char_to_string.trim().is_empty() {
-            // check the next character if number find next letter char
-            let mut index = i + 1;
-            while index <= str_array.len() {
-                if str_array[index].is_numeric() {
-                    index = index + 1;
-                    continue;
-                }
-                str_array[index] = str_array[index].to_ascii_uppercase();
-                break;
-            }
-            continue;
-        }
-        combine_result.push_str(&char_to_string)
+    //regex to substitute
+    let re = regex::Regex::new(
+			r"(?x)
+			(?P<cut>[^a-zA-Z\d]+) # every char not in camelCase
+			(?:
+				(?P<replace>
+					\d+[a-zA-Z]  # example: 24h
+					|
+					\d+    # example: 500
+					|
+					[a-zA-Z]  # example: format
+				)
+			|$)"
+    )
+    .unwrap();
+    let prep = string.to_lowercase();
+    let ret = re.replace_all(&prep, |caps: &Captures| {
+        format!(
+            "{}",
+            &caps.get(2).map(|n| n.as_str()).unwrap_or("").to_uppercase()
+        )
+    });
+    if ret.chars().next().map(|c| !c.is_ascii()).unwrap_or(true) {
+        return ret.to_string();	//error handling for when String size is less than two
     }
+    let tail = &ret[1..];
 
-    return combine_result;
+    format!("{}{tail}", ret.chars().next().unwrap().to_lowercase())
 }
-
 
 #[test]
 fn test_new() {
@@ -54,4 +58,13 @@ fn test_new() {
 
     let test_six = String::from("xhr2 request");
     assert_eq!(new(test_six), "xhr2Request");
+
+    let test_seven = String::from("--xhr--request--");
+    assert_eq!(new(test_seven), "xhrRequest");
+
+    let test_eight = String::from("__FOO_BAR__");
+    assert_eq!(new(test_eight), "fooBar");
+
+    let test_nine = String::from("foo 2000_ha");
+    assert_eq!(new(test_nine),"foo2000Ha");
 }
