@@ -47,7 +47,7 @@ Please use the conventional [rust coding guidelines](https://github.com/rust-lan
 - [x] [DropRight](/src/drop_right.rs)
 - [x] [DropWhile](/src/drop_while.rs)
 - [x] [DropRightWhile](/src/drop_right_while.rs)
-- [ ] Every
+- [x] [Every](/src/every.rs)
 - [ ] EveryValue
 - [ ] FindKey
 - [ ] FindLast
