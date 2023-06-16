@@ -36,4 +36,5 @@ fn test_new() {
     assert_eq!(new([true, false].to_vec(), &|x: bool| x), false);
     assert_eq!(new([false, false].to_vec(), &|x: bool| x), false);
     assert_eq!(new([true, true].to_vec(), &|x: bool| x), true);
+    assert_eq!(new([].to_vec(), &|x: bool| x), true);
 }
