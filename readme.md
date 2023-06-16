@@ -1,15 +1,12 @@
-# LODASH RUST 
+# LODASH RUST
 
 Implementation of Lodash methods in Rust
 
-See [here](https://github.com/lodash/lodash) for all lodash methods 
+See [here](https://github.com/lodash/lodash) for all lodash methods
 
 # CONTRIBUTING LODASH RUST
 
-Contributions are always welcome. Before contributing please read the
-[code of conduct](https://code-of-conduct.openjsf.org) &
-[search the issue tracker](https://github.com/charleslukes/lodash-rust/issues); your issue
-may have already been discussed or fixed in `main`. To contribute,
+Contributions are always welcome. Before contributing please check the [method list](#method-list) and see which methods are not yet implemented, also you can add new methods not implemented from [here](https://github.com/lodash/lodash). To contribute,
 [fork](https://help.github.com/articles/fork-a-repo/) Lodash, commit your changes,
 & [send a pull request](https://help.github.com/articles/using-pull-requests/).
 
@@ -25,19 +22,19 @@ Before submitting a request, please search for similar ones in the
 
 ## Pull Requests
 
-For additions or bug fixes, please modify the relevant files. Include
-updated unit tests in the test macro of that file as part of your pull request.
+Modify or include relevant files also add unit tests in the test macro of that file as part of your pull request.
+
+Branch name are as follow      
+For new method => `feat/name_of_method`   
+For Bug Fix => `fix/name_of_method`
 
 
 ## Coding Guidelines
 
 Please use the conventional [rust coding guidelines](https://github.com/rust-lang/style-team/blob/master/guide/guide.md)
 
-
 # METHOD LIST
-NB: More will be added
-
-- [x] [CamelCase](/src/camel_case.rs) 
+- [x] [CamelCase](/src/camel_case.rs)
 - [x] [Capitalize](/src/capitalize.rs)
 - [x] [Difference](/src/difference.rs)
 - [ ] LowerCase
@@ -56,4 +53,3 @@ NB: More will be added
 - [ ] FindLast
 - [ ] FindLastIndex
 - [ ] FindLastKey
-
