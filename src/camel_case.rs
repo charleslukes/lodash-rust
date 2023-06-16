@@ -8,30 +8,36 @@ extern crate regex;
 
 use camel_case::regex::Captures;
 
-pub fn new(mut string: String) -> String{
+pub fn new(string: String) -> String {
     //regex to substitute
-    let re = regex::Regex::new(r"(?x)
-        (?P<cut>[^a-zA-Z\d]+) # every char not in camelCase
-        (?:(?P<replace>
-            \d+[a-zA-Z]  # example: 24h
-            |
-            \d+    # example: 500
-            |
-            [a-zA-Z]  # example: format
-        )|$)").unwrap();
-    string = string.to_lowercase();
-	let ret = re.replace_all(&string, |caps: &Captures|{
-        format!("{}",&caps.get(2).map(|n|n.as_str()).unwrap_or("").to_uppercase())
+    let re = regex::Regex::new(
+			r"(?x)
+			(?P<cut>[^a-zA-Z\d]+) # every char not in camelCase
+			(?:
+				(?P<replace>
+					\d+[a-zA-Z]  # example: 24h
+					|
+					\d+    # example: 500
+					|
+					[a-zA-Z]  # example: format
+				)
+			|$)"
+    )
+    .unwrap();
+    let prep = string.to_lowercase();
+    let ret = re.replace_all(&prep, |caps: &Captures| {
+        format!(
+            "{}",
+            &caps.get(2).map(|n| n.as_str()).unwrap_or("").to_uppercase()
+        )
     });
-    if ret.chars().next().map(|c|!c.is_ascii()).unwrap_or(true){
-        return ret.to_string();
+    if ret.chars().next().map(|c| !c.is_ascii()).unwrap_or(true) {
+        return ret.to_string();	//error handling for when String size is less than two
     }
     let tail = &ret[1..];
 
-    format!("{}{tail}",ret.chars().next().unwrap().to_lowercase())
+    format!("{}{tail}", ret.chars().next().unwrap().to_lowercase())
 }
-
-// TODO: Rewrite just using regex
 
 #[test]
 fn test_new() {
