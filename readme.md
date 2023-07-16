@@ -53,3 +53,5 @@ Please use the conventional [rust coding guidelines](https://github.com/rust-lan
 - [x] FindLast
 - [ ] FindLastIndex
 - [ ] FindLastKey
+- [ ] Filter
+
