@@ -2,6 +2,13 @@
 name = "lodash_rust"
 version = "0.1.0"
 authors = ["Charles Chiakwa"]
+description = "Javascript Lodash functions in Rust"
+readme = "readme.md"
+homepage = "https://github.com/charleslukes/lodash-rust/"
+repository = "https://github.com/charleslukes/lodash-rust/"
+license = "MIT OR Apache-2.0"
+keywords = ["lodash", "javascript", "functions", "rust"]
+
 
 [dependencies]
 regex = "1"
