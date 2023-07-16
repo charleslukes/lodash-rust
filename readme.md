@@ -50,6 +50,6 @@ Please use the conventional [rust coding guidelines](https://github.com/rust-lan
 - [x] [Every](/src/every.rs)
 - [ ] EveryValue
 - [ ] FindKey
-- [ ] FindLast
+- [x] FindLast
 - [ ] FindLastIndex
 - [ ] FindLastKey
