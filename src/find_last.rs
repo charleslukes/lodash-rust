@@ -1,4 +1,3 @@
-use std::fmt::Display;
 
 ///
 /// This method is like `find` except that it iterates over elements of
@@ -11,7 +10,7 @@ use std::fmt::Display;
 /// @returns {*} Returns the matched element, else `None`.
 ///
 
-pub fn new<T: Copy + Display>(
+pub fn new<T: Copy>(
     array: Vec<T>,
     f: &dyn Fn(T) -> bool,
     from_index: usize,
