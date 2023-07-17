@@ -1,8 +1,16 @@
-///  
-///  Iterates over elements of `array`, returning an array of all elements
-///  `predicate` returns truthy for. The predicate is invoked with three
-///  arguments: (value, index, array).
-///  
+//!  Iterates over elements of `array`, returning an array of all elements
+//!  `predicate` returns truthy for. 
+//!
+//! Example
+//! ```
+//! use lodash_rust::filter;
+//! 
+//! fn main() {
+//!  let res = filter::new([1, 2, 3, 4].to_vec(), &|x: i32| x < 3);
+//!  println!("{res}") // [1, 2]
+//! }
+//! ```
+//! 
 
 
 pub fn new<T: Copy>(array: Vec<T>, f: &dyn Fn(T) -> bool) -> Vec<T> {
