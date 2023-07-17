@@ -1,11 +1,19 @@
-extern crate regex;
+//! Converts `String` to  [snake case](https://en.wikipedia.org/wiki/Snake_case).
+//!
+//! Example
+//! ```
+//! use lodash_rust::snake_case;
+//! 
+//! fn main() {
+//!  let value = String::from("Foo Bar")
+//!  let res = snake_case::new(value);
+//!  println!("{res}") // "foo-bar"
+//! }
+//! ```
+//!
 
-///  Converts `String` to  [snake case](https://en.wikipedia.org/wiki/Snake_case).
-///
-/// @category String
-/// @param {String} [string=''] The string to convert.
-/// @returns {String} Returns the snake cased string.
-///
+
+extern crate regex;
 
 pub fn new(s: &str) -> String {
     let re = regex::Regex::new("[^a-zA-Z0-9]+").unwrap();
