@@ -1,3 +1,31 @@
+//! A library for javascript lodash methods in rustlang
+//!
+//! This library methods is meant to give the same output as 
+//! their equivalent in javascript, if you notice any bugs or differences
+//! please on an issue. 
+//!
+//! # Usage
+//!
+//! First, add this to your Cargo.toml
+//!
+//! ```toml
+//! [dependencies]
+//! lodash_rust = "0.1.0"
+//! ```
+//!
+//! Next:
+//!
+//! ```
+//! use lodash_rust::capitalize;
+//! 
+//! fn main() {
+//!  let greet = String::from("hello world");
+//!  let res = capitalize::new(greet);
+//!  println!("{res}") // Hello world
+//! }
+//! ```
+//!
+
 pub mod camel_case;
 pub mod capitalize;
 pub mod difference;

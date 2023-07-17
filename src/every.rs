@@ -1,19 +1,21 @@
-/// Checks if `predicate` returns truthy for **all** elements of `array`
-/// Iteration is stopped once `predicate` returns falsey. The predicate is
-/// invoked with three arguments: (value, index, array).
-/// __Note:__ This method returns `true` for
-/// [empty vector](https://en.wikipedia.org/wiki/Empty_set) because
-/// [everything is true](https://en.wikipedia.org/wiki/Vacuous_truth) of
-/// elements of empty vector.
-///
-/// @since 5.0.0
-/// @category Vector
-/// @param {Vector} array The array to iterate over.
-/// @param {Function} predicate The function invoked per iteration.
-/// @returns {bool} Returns `true` if all elements pass the predicate check,
-///  else `false`.
-///
-///
+//! Checks if `predicate` returns truthy for **all** elements of `array`
+//! Iteration is stopped once `predicate` returns falsy. The predicate is
+//! __Note:__ This method returns `true` for
+//! [empty vector](https://en.wikipedia.org/wiki/Empty_set) because
+//! [everything is true](https://en.wikipedia.org/wiki/Vacuous_truth) of
+//! elements of empty vector.
+//!
+//! Example
+//! ```
+//! use lodash_rust::every;
+//! 
+//! fn main() {
+//!  let res = every::new([true, false].to_vec(), &|x: bool| x);
+//!  println!("{res}") // false
+//! }
+//! ```
+//! 
+
 
 pub fn new<T: Copy>(array: Vec<T>, f: &dyn Fn(T) -> bool) -> bool {
     let mut result = true;

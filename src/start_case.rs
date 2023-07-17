@@ -1,11 +1,18 @@
-extern crate regex;
+//!  Converts `String` to [start case](https://en.wikipedia.org/wiki/Letter_case#Stylistic_or_specialised_usage).
+//!
+//! Example
+//! ```
+//! use lodash_rust::start_case;
+//! 
+//! fn main() {
+//!  let value = String::from("--foo-bar--")
+//!  let res = start_case::new(value);
+//!  println!("{res}") // "Foo Bar"
+//! }
+//! ```
+//!
 
-///  Converts `String` to [start case](https://en.wikipedia.org/wiki/Letter_case#Stylistic_or_specialised_usage).
-///
-/// @category String
-/// @param {String} [string=''] The string to convert.
-/// @returns {String} Returns the start cased string.
-///
+extern crate regex;
 
 pub fn new(s: &str) -> String {
     let re = regex::Regex::new("[^a-zA-Z0-9]+").unwrap();

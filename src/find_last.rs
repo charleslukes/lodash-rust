@@ -1,14 +1,16 @@
-
-///
-/// This method is like `find` except that it iterates over elements of
-/// `collection` from right to left.
-///
-/// @category Collection
-/// @param {Vector} collection The collection to inspect.
-/// @param {Function} predicate The function invoked per iteration.
-/// @param {number} [fromIndex=collection.length-1] The index to search from.
-/// @returns {*} Returns the matched element, else `None`.
-///
+//! This method is like `find` except that it iterates over elements of
+//! `collection` from right to left.
+//!
+//! Example
+//! ```
+//! use lodash_rust::find_last;
+//! 
+//! fn main() {
+//!  let res = find_last::new([1, 2, 3, 4].to_vec(), &|x: i32| x % 2 == 1, 3);
+//!  println!("{res}") // Some(3)
+//! }
+//! ```
+//! 
 
 pub fn new<T: Copy>(
     array: Vec<T>,

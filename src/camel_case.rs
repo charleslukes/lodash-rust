@@ -1,9 +1,16 @@
-///  Converts `string` to [camel case](https://en.wikipedia.org/wiki/CamelCase).
-/// 
-///  @param {String} [string=''] The string to convert.
-///  @returns {String} Returns the camel cased string.
-///  @see lower_case, kebab_case, snake_case, start_case, upper_case, upper_first
-/// 
+//!  Converts `String` to [camel case](https://en.wikipedia.org/wiki/CamelCase).
+//! 
+//! Example
+//! ```
+//! use lodash_rust::camel_case;
+//! 
+//! fn main() {
+//!  let value = String::from("enable 6h format");
+//!  let res = camel_case::new(value);
+//!  println!("{res}") // enable6HFormat
+//! }
+//! ```
+//! 
 extern crate regex;
 
 use camel_case::regex::Captures;
