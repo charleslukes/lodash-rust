@@ -1,12 +1,18 @@
+//! Creates a slice of `array` with `n` elements dropped from the beginning.
+//! 
+//! Example
+//! ```
+//! use lodash_rust::drop;
+//! 
+//! fn main() {
+//!  let res = drop::new([1, 2, 3].to_vec(), Some(5));
+//!  println!("{res}") // []
+//! }
+//! ```
+//! 
+
 use std::convert::TryInto;
 
-/// Creates a slice of `array` with `n` elements dropped from the beginning.
-///
-/// @category Vec
-/// @param {Vec} array The vector to query.
-/// @param {number} [n=1] The number of elements to drop.
-/// @returns {Vec} Returns the slice of `Vec`.
-///
 
 pub fn new<T: PartialOrd + Eq + Clone>(array: Vec<T>, number: Option<i32>) -> Vec<T> {
     // defaults to 1
