@@ -1,12 +1,17 @@
-use std::convert::TryInto;
+//! Creates a slice of `array` with `n` elements dropped from the end.
+//! 
+//! Example
+//! ```
+//! use lodash_rust::drop_right;
+//! 
+//! fn main() {
+//!  let res = drop_right::new([1, 2, 3].to_vec(), Some(2));
+//!  println!("{res}") // [1]
+//! }
+//! ```
+//! 
 
-/// Creates a slice of `array` with `n` elements dropped from the end.
-///
-/// @category Vec
-/// @param {Vec} array The vector to query.
-/// @param {number} [n=1] The number of elements to drop.
-/// @returns {Vec} Returns the slice of `Vec`.
-///
+use std::convert::TryInto;
 
 pub fn new<T: PartialOrd + Eq + Clone>(array: Vec<T>, number: Option<i32>) -> Vec<T> {
     // defaults to 1
