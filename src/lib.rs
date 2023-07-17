@@ -10,3 +10,4 @@ pub mod drop_while;
 pub mod drop_right_while;
 pub mod every;
 pub mod find_last;
+pub mod filter;
