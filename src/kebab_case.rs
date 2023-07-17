@@ -1,11 +1,20 @@
-extern crate regex;
+//! Converts `String` to [kebab case](https://en.wikipedia.org/wiki/Letter_case#Special_case_styles).
+//! This method is like `find` except that it iterates over elements of
+//! `collection` from right to left.
+//!
+//! Example
+//! ```
+//! use lodash_rust::kebab_case;
+//! 
+//! fn main() {
+//!  let value = String::from("Foo Bar")
+//!  let res = kebab_case::new(value);
+//!  println!("{res}") // "foo-bar"
+//! }
+//! ```
+//!
 
-///  Converts `String` to [kebab case](https://en.wikipedia.org/wiki/Letter_case#Special_case_styles).
-///
-/// @category String
-/// @param {String} [string=''] The string to convert.
-/// @returns {String} Returns the kebab cased string.
-///
+extern crate regex;
 
 pub fn new(s: &str) -> String {
     let re = regex::Regex::new("[^a-zA-Z0-9]+").unwrap();
