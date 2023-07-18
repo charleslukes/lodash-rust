@@ -48,10 +48,10 @@ Please use the conventional [rust coding guidelines](https://github.com/rust-lan
 - [x] [DropWhile](/src/drop_while.rs)
 - [x] [DropRightWhile](/src/drop_right_while.rs)
 - [x] [Every](/src/every.rs)
-- [ ] EveryValue
+- [x] [EveryValue](/src/every_value.rs)
 - [ ] FindKey
 - [x] FindLast
 - [ ] FindLastIndex
 - [ ] FindLastKey
-- [x] Filter
+- [x] [Filter](/src/filter.rs)
 
