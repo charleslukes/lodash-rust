@@ -39,3 +39,4 @@ pub mod drop_right_while;
 pub mod every;
 pub mod find_last;
 pub mod filter;
+pub mod every_value;

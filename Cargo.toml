@@ -6,7 +6,7 @@ description = "Javascript Lodash functions in Rust"
 readme = "readme.md"
 homepage = "https://github.com/charleslukes/lodash-rust/"
 repository = "https://github.com/charleslukes/lodash-rust/"
-license = "LICENSE.txt"
+license = "MIT OR Apache-2.0"
 keywords = ["lodash", "javascript", "functions", "rust"]
 
 
