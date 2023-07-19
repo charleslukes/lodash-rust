@@ -49,7 +49,7 @@ Please use the conventional [rust coding guidelines](https://github.com/rust-lan
 - [x] [DropRightWhile](/src/drop_right_while.rs)
 - [x] [Every](/src/every.rs)
 - [x] [EveryValue](/src/every_value.rs)
-- [ ] FindKey
+- [x] [FindKey](/src/find_key.rs)
 - [x] FindLast
 - [ ] FindLastIndex
 - [ ] FindLastKey
