@@ -50,8 +50,8 @@ Please use the conventional [rust coding guidelines](https://github.com/rust-lan
 - [x] [Every](/src/every.rs)
 - [x] [EveryValue](/src/every_value.rs)
 - [x] [FindKey](/src/find_key.rs)
-- [x] FindLast
-- [ ] FindLastIndex
+- [x] [FindLast](/src/find_last.rs)
+- [x] [FindLastIndex](/src/find_last_index.rs)
 - [ ] FindLastKey
 - [x] [Filter](/src/filter.rs)
 
