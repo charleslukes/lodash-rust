@@ -40,3 +40,4 @@ pub mod every;
 pub mod find_last;
 pub mod filter;
 pub mod every_value;
+pub mod find_key;
