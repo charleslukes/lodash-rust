@@ -44,3 +44,4 @@ pub mod find_key;
 pub mod find_last_index;
 pub mod lower_case;
 pub mod upper_case;
+pub mod upper_first;
