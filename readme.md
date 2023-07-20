@@ -42,7 +42,7 @@ Please use the conventional [rust coding guidelines](https://github.com/rust-lan
 - [x] [SnakeCase](/src/snake_case.rs)
 - [x] [StartCase](/src/start_case.rs)
 - [x] [UpperCase](/src/upper_case.rs)
-- [ ] UpperFirst
+- [x] [UpperFirst](/src/upper_first.rs)
 - [x] [Drop](/src/drop.rs)
 - [x] [DropRight](/src/drop_right.rs)
 - [x] [DropWhile](/src/drop_while.rs)
