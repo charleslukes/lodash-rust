@@ -41,7 +41,7 @@ Please use the conventional [rust coding guidelines](https://github.com/rust-lan
 - [x] [KebabCase](/src/kebab_case.rs)
 - [x] [SnakeCase](/src/snake_case.rs)
 - [x] [StartCase](/src/start_case.rs)
-- [ ] UpperCase
+- [x] [UpperCase](/src/upper_case.rs)
 - [ ] UpperFirst
 - [x] [Drop](/src/drop.rs)
 - [x] [DropRight](/src/drop_right.rs)
