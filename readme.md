@@ -37,12 +37,12 @@ Please use the conventional [rust coding guidelines](https://github.com/rust-lan
 - [x] [CamelCase](/src/camel_case.rs)
 - [x] [Capitalize](/src/capitalize.rs)
 - [x] [Difference](/src/difference.rs)
-- [ ] LowerCase
+- [x] [LowerCase](/src/lower_case.rs)
 - [x] [KebabCase](/src/kebab_case.rs)
 - [x] [SnakeCase](/src/snake_case.rs)
 - [x] [StartCase](/src/start_case.rs)
-- [ ] UpperCase
-- [ ] UpperFirst
+- [x] [UpperCase](/src/upper_case.rs)
+- [x] [UpperFirst](/src/upper_first.rs)
 - [x] [Drop](/src/drop.rs)
 - [x] [DropRight](/src/drop_right.rs)
 - [x] [DropWhile](/src/drop_while.rs)
@@ -52,6 +52,5 @@ Please use the conventional [rust coding guidelines](https://github.com/rust-lan
 - [x] [FindKey](/src/find_key.rs)
 - [x] [FindLast](/src/find_last.rs)
 - [x] [FindLastIndex](/src/find_last_index.rs)
-- [ ] FindLastKey
 - [x] [Filter](/src/filter.rs)
 
