@@ -55,4 +55,5 @@ Please use the conventional [rust coding guidelines](https://github.com/rust-lan
 - [x] [Filter](/src/filter.rs)
 - [x] [After](src/after.rs)
 - [] CountBy
+- [x] [CastArray](/src/cast_array.rs)
 
