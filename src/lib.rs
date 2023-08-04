@@ -46,3 +46,4 @@ pub mod lower_case;
 pub mod upper_case;
 pub mod upper_first;
 pub mod after;
+pub mod cast_array;
