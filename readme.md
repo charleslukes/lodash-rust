@@ -53,4 +53,6 @@ Please use the conventional [rust coding guidelines](https://github.com/rust-lan
 - [x] [FindLast](/src/find_last.rs)
 - [x] [FindLastIndex](/src/find_last_index.rs)
 - [x] [Filter](/src/filter.rs)
+- [x] [After](src/after.rs)
+- [] CountBy
 

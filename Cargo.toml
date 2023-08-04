@@ -1,6 +1,6 @@
 [package]
 name = "lodash_rust"
-version = "0.1.1"
+version = "0.1.2"
 authors = ["Charles Chiakwa"]
 description = "Javascript Lodash functions in Rust"
 readme = "readme.md"
