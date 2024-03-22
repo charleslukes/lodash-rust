@@ -10,21 +10,19 @@
 //! ```
 //! use lodash_rust::every_value;
 //!
-//! fn main() {
-//!    let mut map: HashMap<char, u64> = HashMap::new();
-//!     map.insert('a', 1);
-//!     map.insert('b', 2);
-//!     map.insert('c', 3);
+//! let mut map: HashMap<char, u64> = HashMap::new();
+//! map.insert('a', 1);
+//! map.insert('b', 2);
+//! map.insert('c', 3);
 //!
-//!    let res = every_value::new(&map, |&x| x % 2 == 1);
-//!    println!("{res}") // false
-//! }
+//! let res = every_value::new(&map, |&x| x % 2 == 1);
+//! println!("{res}") // false
 //! ```
 
 use std::collections::HashMap;
 
 pub fn new<K, V, F: Fn(&V) -> bool>(h: &HashMap<K, V>, p: F) -> bool {
-    for (_k, v) in h {
+    for v in h.values() {
         if !p(v) {
             return false;
         }
@@ -39,6 +37,6 @@ fn test_new() {
     map.insert('b', 2);
     map.insert('c', 3);
 
-    assert_eq!(new(&map, |&x| x % 2 == 1), false);
-    assert_eq!(new(&map, |&x| x >= 1), true);
+    assert!(!new(&map, |&x| x % 2 == 1));
+    assert!(new(&map, |&x| x >= 1));
 }

@@ -1,17 +1,13 @@
 //!  Converts the first character of `String` to upper case and the remaining to lower case.
-//! 
+//!
 //! Example
 //! ```
 //! use lodash_rust::capitalize;
-//! 
-//! fn main() {
-//!  let greet = String::from("hello world");
-//!  let res = capitalize::new(greet);
-//!  println!("{res}") // Hello world
-//! }
+//!
+//! let greet = String::from("hello world");
+//! let res = capitalize::new(greet);
+//! println!("{res}") // Hello world
 //! ```
-//!  
-
 
 pub fn new(string: String) -> String {
     let mut c = string.chars();

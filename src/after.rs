@@ -13,7 +13,7 @@
 //!  after.call(2, || println!("Hello World..."));
 //! }
 //! ```
-//!  
+//!
 
 pub struct After {
     count: usize,
@@ -25,7 +25,7 @@ impl After {
     }
     pub fn call<F>(&mut self, n: usize, func: F)
     where
-        F: Fn() -> (),
+        F: Fn(),
     {
         self.count += 1;
 
@@ -34,6 +34,12 @@ impl After {
             // reinitialize counter back to 0
             self.count = 0;
         }
+    }
+}
+
+impl Default for After {
+    fn default() -> Self {
+        Self::new()
     }
 }
 

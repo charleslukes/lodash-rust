@@ -3,14 +3,11 @@
 //! Example
 //! ```
 //! use lodash_rust::start_case;
-//! 
-//! fn main() {
-//!  let value = String::from("--foo-bar--")
-//!  let res = start_case::new(value);
-//!  println!("{res}") // "Foo Bar"
-//! }
-//! ```
 //!
+//! let value = String::from("--foo-bar--")
+//! let res = start_case::new(value);
+//! println!("{res}") // "Foo Bar"
+//! ```
 
 extern crate regex;
 
@@ -19,7 +16,7 @@ pub fn new(s: &str) -> String {
     let result = re.replace_all(s, " ");
     let result = result.trim();
 
-    let chars_list = result.chars().into_iter().collect::<Vec<char>>();
+    let chars_list = result.chars().collect::<Vec<char>>();
     let mut build_string = String::new();
 
     let mut tmp = [0u8; 4];
@@ -37,14 +34,14 @@ pub fn new(s: &str) -> String {
         }
 
         if value > 0 && current_char.is_uppercase() && chars_list[value - 1].is_ascii_lowercase() {
-            build_string.push_str(" ");
+            build_string.push(' ');
             current_char = current_char.to_ascii_uppercase();
         }
 
         build_string.push_str(current_char.encode_utf8(&mut tmp));
     }
 
-    return build_string;
+    build_string
 }
 
 #[test]

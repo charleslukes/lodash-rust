@@ -5,14 +5,11 @@
 //! Example
 //! ```
 //! use lodash_rust::kebab_case;
-//! 
-//! fn main() {
-//!  let value = String::from("Foo Bar")
-//!  let res = kebab_case::new(value);
-//!  println!("{res}") // "foo-bar"
-//! }
-//! ```
 //!
+//! let value = String::from("Foo Bar")
+//! let res = kebab_case::new(value);
+//! println!("{res}") // "foo-bar"
+//! ```
 
 extern crate regex;
 
@@ -43,7 +40,7 @@ pub fn new(s: &str) -> String {
         return build_result_string.to_lowercase();
     }
 
-    return result_string.to_string().to_lowercase();
+    result_string.to_string().to_lowercase()
 }
 
 #[test]
