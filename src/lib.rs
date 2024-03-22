@@ -47,3 +47,4 @@ pub mod snake_case;
 pub mod start_case;
 pub mod upper_case;
 pub mod upper_first;
+pub mod count_by;
