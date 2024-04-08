@@ -6,7 +6,7 @@
 //!
 //! let greet = String::from("hello world");
 //! let res = cast_array::new(greet);
-//! println!("{res}") // ["hello world"]
+//! println!("{res:?}") // ["hello world"]
 //! ```
 
 pub fn new<T>(data: T) -> Vec<T> {

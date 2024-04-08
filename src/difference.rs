@@ -11,7 +11,7 @@
 //! let original_vector = [2, 1, 2, 3].to_vec();
 //! let vector_to_check = [[3, 2].to_vec(), [3, 4].to_vec()].to_vec();
 //! let res = difference::new(original_vector, vector_to_check);
-//! println!("{res}") // [1]
+//! println!("{res:?}") // [1]
 //! ```
 
 use std::collections::HashSet;

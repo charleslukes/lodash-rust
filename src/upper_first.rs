@@ -4,8 +4,8 @@
 //! ```
 //! use lodash_rust::upper_first;
 //!
-//! let value = String::from("foo")
-//! let res = upper_first::new(value);
+//! let value = String::from("foo");
+//! let res = upper_first::new(&value);
 //! println!("{res}") // "Foo"
 //! ```
 

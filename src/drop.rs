@@ -5,7 +5,7 @@
 //! use lodash_rust::drop;
 //!
 //! let res = drop::new([1, 2, 3].to_vec(), Some(5));
-//! println!("{res}") // []
+//! println!("{res:?}") // []
 //! ```
 
 use std::convert::TryInto;

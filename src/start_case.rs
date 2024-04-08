@@ -4,8 +4,8 @@
 //! ```
 //! use lodash_rust::start_case;
 //!
-//! let value = String::from("--foo-bar--")
-//! let res = start_case::new(value);
+//! let value = String::from("--foo-bar--");
+//! let res = start_case::new(&value);
 //! println!("{res}") // "Foo Bar"
 //! ```
 

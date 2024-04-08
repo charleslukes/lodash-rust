@@ -9,6 +9,7 @@
 //! Example
 //! ```
 //! use lodash_rust::every_value;
+//! use std::collections::HashMap;
 //!
 //! let mut map: HashMap<char, u64> = HashMap::new();
 //! map.insert('a', 1);

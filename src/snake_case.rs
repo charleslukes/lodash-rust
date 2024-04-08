@@ -4,8 +4,8 @@
 //! ```
 //! use lodash_rust::snake_case;
 //!
-//! let value = String::from("Foo Bar")
-//! let res = snake_case::new(value);
+//! let value = String::from("Foo Bar");
+//! let res = snake_case::new(&value);
 //! println!("{res}") // "foo-bar"
 //! ```
 

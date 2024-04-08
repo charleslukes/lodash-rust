@@ -6,7 +6,7 @@
 //! use lodash_rust::drop_while;
 //!
 //! let res = drop_while::new([1, 2, 3, 4].to_vec(), &|x: i32| x < 3);
-//! println!("{res}") // [3, 4]
+//! println!("{res:?}") // [3, 4]
 //! ```
 
 pub fn new<T: Copy>(array: Vec<T>, f: &dyn Fn(T) -> bool) -> Vec<T> {

@@ -5,11 +5,11 @@
 //! ```
 //! use lodash_rust::count_by;
 //! let users = [
-//!     ('barney', true),
-//!     ('betty', true),
-//!     ('fred', false)
-//! ]
-//! let res = count_by::new(users, |user| user.1);
+//!     ("barney", true),
+//!     ("betty", true),
+//!     ("fred", false)
+//! ];
+//! let res = count_by::new(&users, |user: &(&str, bool)| (*user).1);
 //! println!("{res:?}") // { true: 2, false: 1 }
 //! ```
 

@@ -4,8 +4,8 @@
 //! ```
 //! use lodash_rust::lower_case;
 //!
-//! let value = String::from("--foo-bar--")
-//! let res = lower_case::new(value);
+//! let value = String::from("--foo-bar--");
+//! let res = lower_case::new(&value);
 //! println!("{res}") // "foo bar"
 //! ```
 
