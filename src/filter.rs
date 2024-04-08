@@ -6,7 +6,7 @@
 //! use lodash_rust::filter;
 //!
 //! let res = filter::new([1, 2, 3, 4].to_vec(), &|x: i32| x < 3);
-//! println!("{res}") // [1, 2]
+//! println!("{res:?}") // [1, 2]
 //! ```
 
 pub fn new<T: Copy>(array: Vec<T>, f: &dyn Fn(T) -> bool) -> Vec<T> {

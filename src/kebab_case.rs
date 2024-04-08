@@ -6,8 +6,8 @@
 //! ```
 //! use lodash_rust::kebab_case;
 //!
-//! let value = String::from("Foo Bar")
-//! let res = kebab_case::new(value);
+//! let value = String::from("Foo Bar");
+//! let res = kebab_case::new(&value);
 //! println!("{res}") // "foo-bar"
 //! ```
 

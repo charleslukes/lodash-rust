@@ -27,8 +27,8 @@
 //! }
 //!
 //! let all_persons = vec![person_1, person_2, person_3];
-//! let res = find_last_index::new(&all_persons, is_older_than_20)
-//! println!("{res}") // Some(2)
+//! let res = find_last_index::new(&all_persons, is_older_than_20);
+//! println!("{res:?}") // Some(2)
 //! ```
 
 pub fn new<T, F: Fn(&T) -> bool>(array: &[T], p: F) -> Option<usize> {

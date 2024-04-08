@@ -3,17 +3,14 @@
 //!
 //! Example
 //! ```
-//! use lodash_rust::after{After};
+//! use lodash_rust::after::After;
 //!
-//! fn main() {
-//!  let mut after = After::new();
-//!  // doesn't call now
-//!  after.call(2, || println!("Hello World..."));
-//!  // gets called now and print "Hello World..."
-//!  after.call(2, || println!("Hello World..."));
-//! }
+//! let mut after = After::new();
+//! // doesn't call now
+//! after.call(2, || println!("Hello World..."));
+//! // gets called now and print "Hello World..."
+//! after.call(2, || println!("Hello World..."));
 //! ```
-//!
 
 pub struct After {
     count: usize,

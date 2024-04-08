@@ -7,7 +7,7 @@
 //! use lodash_rust::chunk;
 //!
 //! let numbers: Vec<i32> = vec![1, 2, 3, 4, 5, 6];
-//! let res = chunk::new(numbers);
+//! let res = chunk::new(numbers, 3);
 //! println!("{:?}", res) // [[1, 2, 3], [4, 5, 6]]
 //! ```
 use std::fmt::Debug;

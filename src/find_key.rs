@@ -4,6 +4,7 @@
 //! Example
 //! ```
 //! use lodash_rust::find_key;
+//! use std::collections::HashMap;
 //!
 //! let mut map: HashMap<char, u64> = HashMap::new();
 //! map.insert('a', 1);
@@ -11,7 +12,7 @@
 //! map.insert('c', 3);
 //!
 //! let res = find_key::new(&map, |&x| x % 2 == 1);
-//! println!("{res}") // Some('c')
+//! println!("{res:?}") // Some('c')
 //! ```
 
 use std::collections::HashMap;
@@ -32,6 +33,6 @@ fn test_new() {
     map.insert('b', 2);
     map.insert('c', 3);
 
-    assert_eq!(new(&map, |&x| x % 2 == 1), Some('c'));
+    assert_eq!(new(&map, |&x| x % 3 == 1), Some('a'));
     assert_eq!(new(&map, |&x| x == 2), Some('b'));
 }
