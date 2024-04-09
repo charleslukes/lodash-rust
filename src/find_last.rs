@@ -4,19 +4,12 @@
 //! Example
 //! ```
 //! use lodash_rust::find_last;
-//! 
-//! fn main() {
-//!  let res = find_last::new([1, 2, 3, 4].to_vec(), &|x: i32| x % 2 == 1, 3);
-//!  println!("{res}") // Some(3)
-//! }
+//!
+//! let res = find_last::new([1, 2, 3, 4].to_vec(), &|x: i32| x % 2 == 1, 3);
+//! println!("{res:?}") // Some(3)
 //! ```
-//! 
 
-pub fn new<T: Copy>(
-    array: Vec<T>,
-    f: &dyn Fn(T) -> bool,
-    from_index: usize,
-) -> Option<T> {
+pub fn new<T: Copy>(array: Vec<T>, f: &dyn Fn(T) -> bool, from_index: usize) -> Option<T> {
     if from_index > array.len() - 1 {
         return None;
     }
@@ -34,7 +27,7 @@ pub fn new<T: Copy>(
         }
     }
 
-    return None;
+    None
 }
 
 #[test]

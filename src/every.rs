@@ -8,35 +8,30 @@
 //! Example
 //! ```
 //! use lodash_rust::every;
-//! 
-//! fn main() {
-//!  let res = every::new([true, false].to_vec(), &|x: bool| x);
-//!  println!("{res}") // false
-//! }
+//!
+//! let res = every::new([true, false].to_vec(), &|x: bool| x);
+//! println!("{res}") // false
 //! ```
-//! 
-
 
 pub fn new<T: Copy>(array: Vec<T>, f: &dyn Fn(T) -> bool) -> bool {
     let mut result = true;
 
-    for index in 0..array.len() {
-        let current_value = array[index];
+    for current_value in array {
         if !f(current_value) {
             result = false;
             break;
         }
     }
 
-    return result;
+    result
 }
 
 #[test]
 fn test_new() {
-    assert_eq!(new([1, 2, 3, 4].to_vec(), &|x: i32| x < 3), false);
-    assert_eq!(new([1, 2, 3, 4].to_vec(), &|x: i32| x < 5), true);
-    assert_eq!(new([true, false].to_vec(), &|x: bool| x), false);
-    assert_eq!(new([false, false].to_vec(), &|x: bool| x), false);
-    assert_eq!(new([true, true].to_vec(), &|x: bool| x), true);
-    assert_eq!(new([].to_vec(), &|x: bool| x), true);
+    assert!(!new([1, 2, 3, 4].to_vec(), &|x: i32| x < 3));
+    assert!(new([1, 2, 3, 4].to_vec(), &|x: i32| x < 5));
+    assert!(!new([true, false].to_vec(), &|x: bool| x));
+    assert!(!new([false, false].to_vec(), &|x: bool| x));
+    assert!(new([true, true].to_vec(), &|x: bool| x));
+    assert!(new([].to_vec(), &|x: bool| x));
 }

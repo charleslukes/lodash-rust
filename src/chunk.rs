@@ -6,13 +6,10 @@
 //! ```
 //! use lodash_rust::chunk;
 //!
-//! fn main() {
-//!  let numbers: Vec<i32> = vec![1, 2, 3, 4, 5, 6];
-//!  let res = chunk::new(numbers);
-//!  println!("{:?}", res) // [[1, 2, 3], [4, 5, 6]]
-//! }
+//! let numbers: Vec<i32> = vec![1, 2, 3, 4, 5, 6];
+//! let res = chunk::new(numbers, 3);
+//! println!("{:?}", res) // [[1, 2, 3], [4, 5, 6]]
 //! ```
-//!  
 use std::fmt::Debug;
 
 pub fn new<T: Clone + Debug>(arr: Vec<T>, size: usize) -> Vec<Vec<T>> {

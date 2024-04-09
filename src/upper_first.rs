@@ -4,13 +4,10 @@
 //! ```
 //! use lodash_rust::upper_first;
 //!
-//! fn main() {
-//!  let value = String::from("foo")
-//!  let res = upper_first::new(value);
-//!  println!("{res}") // "Foo"
-//! }
+//! let value = String::from("foo");
+//! let res = upper_first::new(&value);
+//! println!("{res}") // "Foo"
 //! ```
-//!
 
 use crate::capitalize;
 

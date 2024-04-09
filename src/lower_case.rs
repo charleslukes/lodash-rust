@@ -3,19 +3,16 @@
 //! Example
 //! ```
 //! use lodash_rust::lower_case;
-//! 
-//! fn main() {
-//!  let value = String::from("--foo-bar--")
-//!  let res = lower_case::new(value);
-//!  println!("{res}") // "foo bar"
-//! }
-//! ```
 //!
+//! let value = String::from("--foo-bar--");
+//! let res = lower_case::new(&value);
+//! println!("{res}") // "foo bar"
+//! ```
 
 use crate::start_case;
 
 pub fn new(s: &str) -> String {
-   start_case::new(s).to_lowercase()
+    start_case::new(s).to_lowercase()
 }
 
 #[test]

@@ -1,16 +1,13 @@
 //! Creates a slice of `array` excluding elements dropped from the end.
-//! Elements are dropped until `predicate` returns falsy. 
-//! 
+//! Elements are dropped until `predicate` returns falsy.
+//!
 //! Example
 //! ```
 //! use lodash_rust::drop_right_while;
-//! 
-//! fn main() {
-//!  let res = drop_right_while::new(new([1, 2, 3, 4].to_vec(), &|x: i32| x > 2));
-//!  println!("{res}") // [1, 2]
-//! }
+//!
+//! let res = drop_right_while::new([1, 2, 3, 4].to_vec(), &|x: i32| x > 2);
+//! println!("{res:?}") // [1, 2]
 //! ```
-//! 
 
 pub fn new<T: Copy>(array: Vec<T>, f: &dyn Fn(T) -> bool) -> Vec<T> {
     let mut result = Vec::new();
@@ -26,7 +23,7 @@ pub fn new<T: Copy>(array: Vec<T>, f: &dyn Fn(T) -> bool) -> Vec<T> {
         }
     }
 
-    return result;
+    result
 }
 
 #[test]
