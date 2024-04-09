@@ -24,8 +24,10 @@ Before submitting a request, please search for similar ones in the
 
 Modify or include relevant files also add unit tests in the test macro of that file as part of your pull request.
 
-Branch name are as follow      
-For new method => `feat/name_of_method`   
+Branch name are as follow
+
+For new method => `feat/name_of_method`
+
 For Bug Fix => `fix/name_of_method`
 
 
@@ -54,7 +56,6 @@ Please use the conventional [rust coding guidelines](https://github.com/rust-lan
 - [x] [FindLastIndex](/src/find_last_index.rs)
 - [x] [Filter](/src/filter.rs)
 - [x] [After](src/after.rs)
-- [ ] CountBy
+- [x] [CountBy](src/count_by.rs)
 - [x] [CastArray](/src/cast_array.rs)
 - [x] [Chunk](/src/chunk.rs)
-
